@@ -18,6 +18,8 @@ Plug('nvim-tree/nvim-web-devicons')
 Plug('nvim-telescope/telescope.nvim', { ['tag'] = '0.1.8' })
 Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate'})
 Plug('folke/tokyonight.nvim')
+Plug('gelguy/wilder.nvim')
+Plug('mbbill/undotree')
 -- Plug 'folke/which-key.nvim', { 'keys': [ '<leader>', '<c-r>', '<c-w>', '`', 'c', 'v', 'g' ] }
 
 vim.call('plug#end')

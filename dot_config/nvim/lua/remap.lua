@@ -11,3 +11,5 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help ta
 vim.keymap.set('n', '<leader>sm', builtin.lsp_workspace_symbols, { desc = 'List LSP symbol' })
 vim.keymap.set('n', '<leader>of', builtin.oldfiles, { desc = 'Search through old files' })
 
+vim.keymap.set('n', '<leader>U', vim.cmd.UndotreeToggle)
+
