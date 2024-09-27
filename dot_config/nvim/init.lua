@@ -2,6 +2,7 @@ vim.o.relativenumber = true
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
+vim.opt.incsearch = true
 
 local data_dir = vim.fn.stdpath('data')
 if vim.fn.empty(vim.fn.glob(data_dir .. '/site/autoload/plug.vim')) == 1 then
@@ -24,6 +25,16 @@ Plug('folke/tokyonight.nvim')
 Plug('gelguy/wilder.nvim')
 Plug('mbbill/undotree')
 Plug('nvim-tree/nvim-tree.lua', { ['do'] = ':NvimTreeToggle' })
+
+-- lsp
+Plug('neovim/nvim-lspconfig')
+Plug('hrsh7th/nvim-cmp')
+Plug('hrsh7th/cmp-nvim-lsp')
+Plug('VonHeikemen/lsp-zero.nvim', { ['branch'] = 'v4.x'})
+Plug('williamboman/mason.nvim')
+Plug('williamboman/mason-lspconfig.nvim')
+
+
 -- Plug 'folke/which-key.nvim', { 'keys': [ '<leader>', '<c-r>', '<c-w>', '`', 'c', 'v', 'g' ] }
 
 vim.call('plug#end')
