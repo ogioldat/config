@@ -1,8 +1,4 @@
-vim.o.relativenumber = true
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-vim.o.termguicolors = true
-vim.opt.incsearch = true
+require('global')
 
 local data_dir = vim.fn.stdpath('data')
 if vim.fn.empty(vim.fn.glob(data_dir .. '/site/autoload/plug.vim')) == 1 then
@@ -23,11 +19,12 @@ Plug('nvim-lua/plenary.nvim')
 Plug('nvim-tree/nvim-web-devicons')
 Plug('nvim-telescope/telescope.nvim', { ['tag'] = '0.1.8' })
 Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate'})
-Plug('folke/tokyonight.nvim')
-Plug('gelguy/wilder.nvim')
 Plug('mbbill/undotree')
 Plug('nvim-tree/nvim-tree.lua', { ['do'] = ':NvimTreeToggle' })
 Plug('catppuccin/nvim')
+Plug('christoomey/vim-tmux-navigator')
+Plug('m4xshen/autoclose.nvim')
+Plug('nvim-lualine/lualine.nvim')
 
 -- lsp
 Plug('neovim/nvim-lspconfig')
@@ -36,7 +33,6 @@ Plug('hrsh7th/cmp-nvim-lsp')
 Plug('VonHeikemen/lsp-zero.nvim', { ['branch'] = 'v4.x'})
 Plug('williamboman/mason-lspconfig.nvim')
 Plug('williamboman/mason.nvim')
-
 
 -- Plug 'folke/which-key.nvim', { 'keys': [ '<leader>', '<c-r>', '<c-w>', '`', 'c', 'v', 'g' ] }
 
@@ -47,5 +43,4 @@ vim.cmd.colorscheme "catppuccin"
 
 require("nvim-tree").setup()
 require('remap')
-
 
