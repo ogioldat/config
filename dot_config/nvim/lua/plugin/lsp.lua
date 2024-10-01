@@ -24,14 +24,21 @@ lsp_zero.extend_lspconfig({
 })
 
 require('mason').setup({})
-require('mason-lspconfig').setup({
-  ensure_installed = {'lua_ls', 'rust_analyzer', 'ts_ls'},
-  handlers = {
-    function(server_name)
-      require('lspconfig')[server_name].setup({})
-    end,
-  },
-})
+require('mason-lspconfig').setup()
+
+require'lspconfig'.rust_analyzer.setup{
+	on_attach = lsp_attach,
+
+	filetypes = {"rust"},
+  capabilities = require('cmp_nvim_lsp').default_capabilities(),
+  settings = {
+    ['rust-analyzer'] = {
+      diagnostics = {
+        enable = false;
+      }
+    }
+  }
+}
 
 local cmp = require('cmp')
 
