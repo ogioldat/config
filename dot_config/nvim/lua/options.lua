@@ -20,6 +20,4 @@ vim.keymap.set("n", "<C-`>", vim.cmd.Ex)
 -- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- undotree
-vim.keymap.set("n", "<leader>U", vim.cmd.UndotreeToggle)
-
-
+vim.keymap.set("n", "<leader>u", ":UndotreeToggle<cr>:UndotreeFocus<cr>", { silent = true, noremap = true })
