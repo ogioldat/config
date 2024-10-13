@@ -24,7 +24,13 @@ return {
   },
   {
     "nvim-treesitter/nvim-treesitter",
-    opts = {},
+    opts = {
+      rainbow = {
+        enable = true,
+        extended_mode = true,
+        max_file_lines = nil,
+      }
+    },
     -- opts = function()
     -- 	    vim.cmd(':TSUpdate')
     -- end
@@ -53,7 +59,7 @@ return {
   },
   {
     "numToStr/Comment.nvim",
-    opts = {},
+    Opts = {},
   },
   { 'echasnovski/mini.statusline', version = false, opts = {} },
   {
